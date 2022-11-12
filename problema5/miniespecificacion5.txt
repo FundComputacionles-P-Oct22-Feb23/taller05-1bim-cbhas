@@ -1,0 +1,51 @@
+	1 Inicio
+
+	2 litrosConsumidos, d  [0, n]
+        3 costoLitro, d  [0, n]
+        4 valorAgua, d  [0, n]
+        5 minutosGastados, d  [0, n]
+        6 costoMinuto, d  [0, n]
+        7 valorTelefono, d  [0, n]
+        8 sumaServicios, d  [0, n]
+        9 descuento ← 20
+       10 añosPersona, i  [0 - n]
+
+       11 <<"Ingrese su edad::"
+       12 >>añosPersona
+
+       13 //Agua
+       14 <<"Ingrese el número de litros de agua consumidos en el mes:"
+       15 >>litrosConsumidos 
+       16 <<"Ingrese el  costo del litro de agua:"
+       17 >>costoLitro
+
+       18 valorAgua ← (litrosConsumidos * costroLitro)
+
+
+       19 //Telefono
+       20 <<"Ingrese el número de minutos gastados en el mes:"
+       21 >>minutosGastados 
+       22 <<"Ingrese el costo por minuto:"
+       23 >>costoMinuto 
+
+       24 valorTelefono ← (minutosGastados * costoMinuto)
+
+       25 sumaServicios ← (valorAgua + valorTelefono)
+
+
+       26 <<"El valor a pagar mensual es de:" + sumaServicios
+
+       27 Si (añosPersona > 20 && añosPersona < 100) entonces
+       28    sumaServicios ← (valorAgua + valorTelefono)
+       29    System.out.println("El valor a cancelar es:	" + sumaServicios)
+
+       30 De lo contraio
+       31    Si (añosPersona > 0 && añosPersona < 20) entonces
+       32         descuento ← (sumaServicios * descuento) / 100
+       33         sumaServicios ← (sumaServicios - descuento)
+       34         System.out.println("El valor a cancelar con el descuento es:" + sumaServicios)
+       35    Fin Si
+       36 Fin Si
+
+       37 Fin
+ 

@@ -1,0 +1,28 @@
+	1 Inicio	
+
+	2 costoPedidodescuento, d  [0, n]
+        3 costoPedidodescuento1, d  [0, n]
+        4 costoPedido, d  [0, n]
+        5 cantidadProducto, i  [0 - n]
+        6 precioUnitario, d  [0, n]
+        7 descuento ← 15
+
+        8 <<"Ingrese la cantidad de unidades que requiere:"
+        9 >>cantidadProducto
+
+       10 <<"Ingrese el valor unitario del producto:"
+       11 >>precioUnitario
+
+       12 costoPedidodescuento1 ← cantidadProducto * precioUnitario
+
+       13 Si (cantidadProducto > 50) entonces
+       14    descuento ← (costoPedidodescuento1 * descuento) / 100
+       16    costoPedidodescuento ← costoPedidodescuento1 - descuento
+       16    <<"El valor a cancelar es:" + costoPedidodescuento
+
+       17 De lo contrario
+       18    costoPedido ← cantidadProducto * precioUnitario
+       19    <<"El valor a cancelar es:" + costoPedido
+       20 Fin Si
+
+       21 Fin

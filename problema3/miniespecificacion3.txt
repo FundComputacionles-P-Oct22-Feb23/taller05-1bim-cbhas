@@ -1,0 +1,21 @@
+	1 Inicio	
+
+	2 gradosCentigrados, d  [0, n]
+        3 gradosFarenheit, d  [0, n]
+        4 gradosKelvin, d  [0, n]
+
+        5 <<"Ingrese el valor de grados centı́grados"
+        6 >>gradosCentigrados
+
+        7 Si (gradosCentigrados > 0 && gradosCentigrados ← 100) entonces
+        8    gradosFarenheit ← (9 / 5.0) * gradosCentigrados + 32
+        9    gradosKelvin ← gradosCentigrados + 273.15
+
+       10    <<"Valor en grados Farenheit:" + gradosFarenheit
+
+       11    >>"Valor en grados Kelvin:" + gradosKelvin
+
+       12 De lo contrario
+       13    <<"El valor ingresado está fuera de rango"
+       14 Fin Si
+       15 Fin

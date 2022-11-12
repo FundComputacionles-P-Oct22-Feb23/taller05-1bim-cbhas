@@ -1,0 +1,50 @@
+	1 Inicio	
+
+	2 valorTotal1, d  [0, n]
+        3 valorTotal2, d  [0, n]
+        4 valorTotal3, d  [0, n]
+        5 valorSubtotal, d  [0, n]
+        6 descuento1 ← 10
+        7 descuento2 ← 15
+        8 descuento3 ← 20
+        9 numeroDias, i  [0 - n]
+       10 precioHabitacion, d  [0 - n]
+       
+       11 <<"Ingrese el número de días que se quedará hospedado:"
+       12 >>numeroDias
+
+       13 <<"Ingrese el precio diario de la habitación:"
+       14 >>precioHabitacion 
+
+       15 valorSubtotal ← (numeroDias * precioHabitacion)
+       16 <<"El subtotal por pagar es:" + valorSubtotal
+
+       17 Si (numeroDias > 5 && numeroDias < 10) entonces
+       18    descuento1 ← (valorSubtotal * descuento1) / 100
+       19    valorTotal1 ← (valorSubtotal - descuento1)
+       20    <<"El descuento es de: 10%"
+       21    <<"El total a pagar es:" + valorTotal1
+
+       22 De lo contrario
+       23    Si (numeroDias > 10 && numeroDias < 15) entonces
+       24       descuento2 ← (valorSubtotal * descuento2) / 100
+       25       valorTotal2 ← (valorSubtotal - descuento2)
+       26       <<"El descuento es de: 15%"
+       27       <<"El total a pagar es:" + valorTotal2
+
+       28    De lo contrario
+       29       Si (numeroDias > 15) entonces
+       30          descuento3 ← (valorSubtotal * descuento3) / 100
+       31          valorTotal3 ← (valorSubtotal - descuento3)
+       32          <<"El descuento es de: 20%"
+       33          <<"El total a pagar es:" + valorTotal3
+          
+       34	Fin si
+       35    Fin si
+       36 Fin si
+
+       37 Fin
+
+
+
+
